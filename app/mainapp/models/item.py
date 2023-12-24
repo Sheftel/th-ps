@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, DateTimeField, ImageField, TextField, DecimalField
+from django.db.models import Model, CharField, TextField, IntegerField
 
 __all__ = [
     'Item',
@@ -8,4 +8,4 @@ __all__ = [
 class Item(Model):
     name = CharField(max_length=85)
     description = TextField(blank=True)
-    price = DecimalField(max_digits=6, decimal_places=2)
+    price = IntegerField(default=0)
